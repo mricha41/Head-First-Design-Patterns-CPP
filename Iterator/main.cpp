@@ -6,7 +6,9 @@ int main()
 {
 	PancakeHouseMenu pancakes;
 	DinerMenu diner;
-	Waitress waitress(&pancakes, &diner);
+	CafeMenu cafe;
+
+	Waitress waitress(&pancakes, &diner, &cafe);
 
 	waitress.printMenu();
 

@@ -5,6 +5,8 @@
 #include "PancakeHouseMenuIterator.hpp"
 #include "DinerMenu.hpp"
 #include "DinerMenuIterator.hpp"
+#include "CafeMenu.hpp"
+#include "CafeMenuIterator.hpp"
 
 class Waitress
 {
@@ -13,7 +15,7 @@ private:
 
 public:
 	Waitress() = delete;
-	Waitress(Menu* pancakeHouse, Menu* diner);
+	Waitress(Menu* pancakeHouse, Menu* diner, Menu* cafe);
 
 	~Waitress();
 
@@ -22,6 +24,7 @@ public:
 private:
 	Menu* m_pancakeHouse;
 	Menu* m_diner;
+	Menu* m_cafe;
 };
 
 #endif //WAITRESS_HPP
