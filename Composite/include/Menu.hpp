@@ -5,21 +5,26 @@
 
 #include "MenuComponent.hpp"
 
+class MenuIterator;
+
 class Menu : public MenuComponent
 {
 public:
-	Menu();
+	Menu() = delete;
 	Menu(std::string name, std::string description);
 
-	~Menu();
+	virtual ~Menu();
 
-	virtual bool operator == (MenuComponent component) { return component.getName() == this->getName(); };
-	virtual void add(MenuComponent* component);
-	virtual void remove(MenuComponent& component);
-	virtual MenuComponent getChild(std::size_t id);
-	virtual std::string getName();
-	virtual std::string getDescription();
-	virtual void print();
+	virtual bool operator == (MenuComponent component) override final { return component.getName() == this->getName(); };
+	virtual void add(MenuComponent* component) override final;
+	virtual void remove(MenuComponent& component) override final;
+	virtual MenuComponent getChild(std::size_t id) override final;
+	virtual std::string getName() override final;
+	virtual std::string getDescription() override final;
+	virtual void print() override final;
+
+	virtual Iterator* createIterator() override final;
+	MenuIterator* createMenuIterator();
 
 private:
 	std::vector<MenuComponent*> m_menuComponents;

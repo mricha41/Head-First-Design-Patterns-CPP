@@ -2,6 +2,9 @@
 #define MENUCOMPONENT_HPP
 
 #include <string>
+#include <vector>
+
+class Iterator;
 
 class MenuComponent
 {
@@ -18,6 +21,8 @@ public:
 	virtual double getPrice();
 	virtual bool isVegetarian();
 	virtual void print();
+
+	virtual Iterator* createIterator();
 };
 
 #endif //MENUCOMPONENT_HPP

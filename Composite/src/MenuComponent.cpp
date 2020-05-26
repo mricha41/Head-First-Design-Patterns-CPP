@@ -1,5 +1,7 @@
 #include "MenuComponent.hpp"
 
+#include "Iterator.hpp"
+
 MenuComponent::MenuComponent()
 {
 }
@@ -48,4 +50,9 @@ bool MenuComponent::isVegetarian()
 
 void MenuComponent::print()
 {
+}
+
+Iterator* MenuComponent::createIterator()
+{
+	return nullptr;
 }

@@ -36,3 +36,8 @@ void MenuItem::print()
 	std::cout << ", " << m_price << "\n";
 	std::cout << "    -- " << m_description << "\n";
 }
+
+Iterator* MenuItem::createIterator()
+{
+	return nullptr;
+}

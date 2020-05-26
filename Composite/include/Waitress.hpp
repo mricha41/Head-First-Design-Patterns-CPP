@@ -1,7 +1,7 @@
 #ifndef WAITRESS_HPP
 #define WAITRESS_HPP
 
-#include "MenuComponent.hpp"
+class MenuComponent;
 
 class Waitress
 {
@@ -12,6 +12,7 @@ public:
 	~Waitress();
 
 	void printMenu();
+	void printVegetarianMenu();
 
 private:
 	MenuComponent* m_components;
