@@ -3,7 +3,9 @@ C++ ports of the "Head First Design Patterns" book examples. Examples use modern
 
 ## Notes on Remote and Virtual Proxy
 The Remote Proxy pattern relies on rpclib for both server and client code:
+
 http://rpclib.net
+
 https://github.com/rpclib/rpclib
 
 You must compile and link rpclib on your platform before the code works. In addition, you must leave the server running while you run the client against the server in order to see that the remote functions bound to the server work as expected. This of course requires two separate executables, which should be apparent when you look at the code.
